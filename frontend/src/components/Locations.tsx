@@ -1,35 +1,43 @@
 import { motion } from "framer-motion";
-import { MapPin } from "lucide-react";
+import { MapPin, Globe } from "lucide-react";
 import SectionTitle from "./ui/SectionTitle";
 import GlassCard from "./ui/GlassCard";
 
 const offices = [
-  { city: "Hyderabad", country: "India", status: "HQ" },
-  { city: "Bangalore", country: "India", status: "Engineering" },
-  { city: "London", country: "UK", status: "Europe" },
-  { city: "New York", country: "USA", status: "Americas" },
+  { city: "Hyderabad", country: "India", status: "Global HQ", timezone: "IST (UTC+5:30)" },
+  { city: "Bangalore", country: "India", status: "Engineering Hub", timezone: "IST (UTC+5:30)" },
+  { city: "London", country: "United Kingdom", status: "EMEA Operations", timezone: "GMT (UTC+0)" },
+  { city: "New York", country: "United States", status: "Americas Hub", timezone: "EST (UTC-5)" },
 ];
 
 const Locations = () => (
-  <section id="locations" className="section-padding">
-    <div className="container mx-auto">
-      <SectionTitle badge="Global" title="Our" gradientTitle="offices." description="A global team delivering local expertise." />
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <section id="locations" className="section-padding bg-[#010409]">
+    <div className="container mx-auto max-w-6xl">
+      <SectionTitle
+        badge="Global Footprint"
+        title="Our distributed"
+        gradientTitle="presence."
+        description="Operating seamlessly across timezones to provide round-the-clock engineering velocity."
+      />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {offices.map((o, i) => (
           <motion.div
             key={o.city}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: i * 0.1 }}
+            transition={{ delay: i * 0.08, duration: 0.4 }}
           >
-            <GlassCard className="text-center">
-              <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mx-auto mb-4">
-                <MapPin size={20} className="text-primary-foreground" />
+            <GlassCard className="text-center bg-[#020617]/90 border-blue-950/80 hover:border-blue-500/50 p-6 flex flex-col items-center justify-between h-full shadow-[0_4px_24px_rgba(0,10,30,0.5)] hover:shadow-[0_0_25px_rgba(59,130,246,0.25)]">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center mb-4 shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                <MapPin size={22} className="text-white" />
               </div>
-              <h3 className="font-heading font-semibold text-lg">{o.city}</h3>
-              <p className="text-sm text-muted-foreground">{o.country}</p>
-              <span className="inline-block mt-2 px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">{o.status}</span>
+              <h3 className="font-heading font-bold text-lg sm:text-xl text-white">{o.city}</h3>
+              <p className="text-xs sm:text-sm text-blue-100/70 mb-1">{o.country}</p>
+              <p className="text-[11px] font-mono text-blue-400/70 mb-3">{o.timezone}</p>
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-950/80 text-sky-400 border border-blue-500/30 shadow-[0_0_10px_rgba(59,130,246,0.15)]">
+                {o.status}
+              </span>
             </GlassCard>
           </motion.div>
         ))}

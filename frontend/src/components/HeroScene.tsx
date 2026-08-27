@@ -3,25 +3,25 @@ import { Float, MeshDistortMaterial } from "@react-three/drei";
 import { Suspense } from "react";
 
 const Orb = ({ position, color, size = 1 }: { position: [number, number, number]; color: string; size?: number }) => (
-  <Float speed={2} rotationIntensity={0.4} floatIntensity={1.5}>
+  <Float speed={2.5} rotationIntensity={0.5} floatIntensity={1.8}>
     <mesh position={position}>
       <sphereGeometry args={[size, 64, 64]} />
-      <MeshDistortMaterial color={color} roughness={0.1} metalness={0.8} distort={0.3} speed={2} />
+      <MeshDistortMaterial color={color} roughness={0.15} metalness={0.85} distort={0.35} speed={2.2} />
     </mesh>
   </Float>
 );
 
 const HeroScene = () => (
-  <div className="absolute inset-0 -z-10 opacity-60">
+  <div className="absolute inset-0 -z-10 opacity-70 pointer-events-none">
     <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
       <Suspense fallback={null}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 5, 5]} intensity={1} />
-        <pointLight position={[-5, -5, -5]} intensity={0.5} color="#6366f1" />
-        <Orb position={[-2.5, 1, -2]} color="#3B82F6" size={1.2} />
-        <Orb position={[2.5, -0.5, -3]} color="#6366F1" size={0.9} />
-        <Orb position={[0, 2, -4]} color="#8B5CF6" size={0.7} />
-        <Orb position={[-1, -2, -2]} color="#22C55E" size={0.5} />
+        <ambientLight intensity={0.6} />
+        <directionalLight position={[5, 5, 5]} intensity={1.5} color="#60A5FA" />
+        <pointLight position={[-5, -5, -5]} intensity={1} color="#0EA5E9" />
+        <Orb position={[-2.5, 1, -2]} color="#2563EB" size={1.2} />
+        <Orb position={[2.5, -0.5, -3]} color="#0EA5E9" size={0.9} />
+        <Orb position={[0, 2, -4]} color="#1D4ED8" size={0.7} />
+        <Orb position={[-1, -2, -2]} color="#38BDF8" size={0.5} />
       </Suspense>
     </Canvas>
   </div>

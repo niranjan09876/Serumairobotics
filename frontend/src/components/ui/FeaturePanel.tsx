@@ -5,81 +5,89 @@ import { cn } from "@/lib/utils";
 import GlassCard from "./GlassCard";
 
 interface FeaturePanelProps {
-    title: string;
-    description: string;
-    illustration?: ReactNode;
-    reversed?: boolean;
-    actionText?: string;
-    className?: string;
+  title: string;
+  description: string;
+  illustration?: ReactNode;
+  reversed?: boolean;
+  actionText?: string;
+  className?: string;
 }
 
 export const FeaturePanel = ({
-    title,
-    description,
-    illustration,
-    reversed = false,
-    actionText = "Learn More",
-    className,
+  title,
+  description,
+  illustration,
+  reversed = false,
+  actionText = "Learn More",
+  className,
 }: FeaturePanelProps) => {
-    return (
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-80px" }}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
+      }}
+      className={cn("mb-12 sm:mb-16 md:mb-20 last:mb-0", className)}
+    >
+      <GlassCard
+        hover={false}
+        className={cn(
+          "grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center p-6 sm:p-8 lg:p-12 overflow-hidden relative bg-[#030712]/90 border-blue-900/40 shadow-[0_8px_32px_rgba(0,10,30,0.5)]",
+        )}
+      >
+        {/* Subtle background ambient blue glow */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-transparent to-sky-500/10 blur-3xl pointer-events-none" />
+
         <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={{
-                hidden: { opacity: 0 },
-                visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
-            }}
-            className={cn("mb-20 last:mb-0", className)}
+          className={cn("flex flex-col z-10", reversed && "lg:order-2")}
+          variants={{
+            hidden: { opacity: 0, x: reversed ? 30 : -30 },
+            visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+          }}
         >
-            <GlassCard
-                hover={false}
-                className={cn(
-                    "grid lg:grid-cols-2 gap-8 items-center p-8 lg:p-12 overflow-hidden relative",
-                )}
-            >
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 blur-3xl pointer-events-none" />
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="w-2 h-2 rounded-full bg-sky-400 shadow-[0_0_8px_#38bdf8]" />
+            <span className="text-xs font-mono font-semibold uppercase tracking-wider text-blue-400">
+              {actionText}
+            </span>
+          </div>
 
-                <motion.div
-                    className={cn("flex flex-col z-10", reversed && "lg:order-2")}
-                    variants={{
-                        hidden: { opacity: 0, x: reversed ? 40 : -40 },
-                        visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
-                    }}
-                >
-                    <motion.h3
-                        className="text-3xl md:text-5xl font-heading font-bold mb-4 tracking-tight leading-tight"
-                    >
-                        {title}
-                    </motion.h3>
-                    <motion.p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
-                        {description}
-                    </motion.p>
+          <motion.h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold mb-3 sm:mb-4 tracking-tight leading-tight text-white">
+            {title}
+          </motion.h3>
+          <motion.p className="text-sm sm:text-base md:text-lg text-blue-100/70 mb-6 sm:mb-8 leading-relaxed max-w-xl">
+            {description}
+          </motion.p>
 
-                    <motion.button
-                        whileHover={{ scale: 1.05, x: 5 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="self-start inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold gradient-bg text-primary-foreground text-sm transition-shadow hover:shadow-[0_0_20px_rgba(var(--primary),0.3)]"
-                    >
-                        {actionText} <ArrowRight size={16} />
-                    </motion.button>
-                </motion.div>
-
-                <motion.div
-                    className={cn("relative w-full aspect-square md:aspect-video lg:aspect-[4/3] rounded-2xl overflow-hidden glass-card flex items-center justify-center bg-black/40 p-0", reversed && "lg:order-1")}
-                    variants={{
-                        hidden: { opacity: 0, scale: 0.9, y: 30 },
-                        visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-                    }}
-                    whileHover={{ scale: 1.02, transition: { duration: 0.4 } }}
-                >
-                    {illustration || (
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center animate-pulse">
-                            <span className="text-muted-foreground/50 text-sm font-medium tracking-widest uppercase">Illustration Placeholder</span>
-                        </div>
-                    )}
-                </motion.div>
-            </GlassCard>
+          <motion.div className="flex items-center gap-4">
+            <span className="text-xs text-blue-400 font-medium flex items-center gap-1.5 group cursor-pointer hover:text-blue-300">
+              <span>Explore Phase Details</span>
+              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </span>
+          </motion.div>
         </motion.div>
-    );
+
+        <motion.div
+          className={cn(
+            "relative w-full aspect-video sm:aspect-[16/9] lg:aspect-[4/3] rounded-2xl overflow-hidden glass-card flex items-center justify-center bg-black/60 border-blue-900/50 p-0 shadow-inner",
+            reversed && "lg:order-1"
+          )}
+          variants={{
+            hidden: { opacity: 0, scale: 0.95, y: 20 },
+            visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+          }}
+          whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
+        >
+          {illustration || (
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-sky-900/30 flex items-center justify-center">
+              <span className="text-blue-400/50 text-xs font-mono uppercase tracking-widest">Workflow Visualization</span>
+            </div>
+          )}
+        </motion.div>
+      </GlassCard>
+    </motion.div>
+  );
 };

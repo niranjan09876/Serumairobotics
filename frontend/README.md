@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="AI X Dimension Logo" width="100%" style="border-radius: 12px; margin-bottom: 2rem;" />
+  <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80" alt="SERUM AI ROBOTICS Logo" width="100%" style="border-radius: 12px; margin-bottom: 2rem;" />
 
-  # AI X Dimension
+  # SERUM AI ROBOTICS
   **Next-Generation Digital Agency & Engineering Studio**
 
   [![React](https://img.shields.io/badge/React-18.3-blue.svg?style=flat-square&logo=react)](https://reactjs.org/)
@@ -18,7 +18,7 @@
 
 ## 🚀 Executive Summary
 
-**AI X Dimension** is a fully responsive, enterprise-grade Single Page Application (SPA) providing the digital storefront and service interface for a forward-thinking technology agency. 
+**SERUM AI ROBOTICS** is a fully responsive, enterprise-grade Single Page Application (SPA) providing the digital storefront and service interface for a forward-thinking technology agency. 
 
 Built for performance, scalability, and an immersive user experience, the application leverages a modern React/Vite ecosystem natively integrated with highly optimized 3D graphics (Three.js), complex scrolling animations (GSAP), and declarative UI transitions (Framer Motion). 
 
@@ -128,12 +128,12 @@ Use `npm run build` to generate the highly optimized `./dist` payload, ready for
 
 ## 📄 License & Intellectual Property
 
-This software belongs to **AI X Dimension**.
+This software belongs to **SERUM AI ROBOTICS**.
 
 ```text
 MIT License
 
-Copyright (c) 2026 AI X Dimension
+Copyright (c) 2026 SERUM AI ROBOTICS
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

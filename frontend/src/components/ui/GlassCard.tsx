@@ -10,9 +10,12 @@ interface GlassCardProps {
 
 const GlassCard = ({ children, className, hover = true }: GlassCardProps) => (
   <motion.div
-    whileHover={hover ? { y: -6, scale: 1.02 } : undefined}
-    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-    className={cn("glass-card p-6 hover-glow", className)}
+    whileHover={hover ? { y: -4, scale: 1.01 } : undefined}
+    transition={{ type: "spring", stiffness: 350, damping: 25 }}
+    className={cn(
+      "glass-card p-5 sm:p-6 md:p-8 bg-[#020617]/80 border-blue-950/70 hover:border-blue-500/40 transition-colors duration-300",
+      className
+    )}
   >
     {children}
   </motion.div>

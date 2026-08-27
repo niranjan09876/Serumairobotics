@@ -2,7 +2,13 @@ import { motion, useScroll } from "framer-motion";
 
 const ScrollProgress = () => {
   const { scrollYProgress } = useScroll();
-  return <motion.div className="scroll-progress" style={{ scaleX: scrollYProgress, transformOrigin: "left" }} />;
+
+  return (
+    <motion.div
+      className="scroll-progress"
+      style={{ scaleX: scrollYProgress, transformOrigin: "left" }}
+    />
+  );
 };
 
 export default ScrollProgress;

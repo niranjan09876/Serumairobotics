@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import ThemeToggle from "./ui/ThemeToggle";
-import logo from "../assets/logo.png";
 
 const links = ["About", "Services", "Portfolio", "Process", "Careers", "Contact"];
 
@@ -66,17 +65,17 @@ const Navbar = () => {
         <div className="container mx-auto flex items-center justify-between h-16 sm:h-20 px-4 sm:px-6">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2.5 font-heading font-bold text-lg sm:text-xl text-white group"
+            className="flex items-baseline gap-1.5 sm:gap-2 font-heading font-bold select-none group text-left"
+            aria-label="SERUM AI ROBOTICS Home"
           >
-            <div className="relative flex items-center justify-center">
-              <img
-                src={logo}
-                alt="SERUM AI ROBOTICS Logo"
-                className="w-8 h-8 sm:w-10 sm:h-10 object-contain drop-shadow-[0_0_12px_rgba(59,130,246,0.6)] group-hover:drop-shadow-[0_0_20px_rgba(14,165,233,0.9)] transition-all duration-300"
-              />
-            </div>
-            <span className="tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-blue-300 group-hover:text-blue-400 transition-colors">
-              SERUM AI ROBOTICS
+            <span className="text-lg sm:text-xl font-extrabold tracking-tight text-white group-hover:text-blue-100 transition-colors">
+              SERUM
+            </span>
+            <span className="text-xl sm:text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-sky-300 to-blue-500 drop-shadow-[0_0_12px_rgba(59,130,246,0.6)]">
+              AI
+            </span>
+            <span className="text-base sm:text-lg font-bold tracking-tight text-white/90 group-hover:text-white transition-colors">
+              ROBOTICS
             </span>
           </button>
 

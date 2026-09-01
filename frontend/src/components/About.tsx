@@ -65,6 +65,9 @@ const About = () => (
       >
         <GlassCard className="bg-[#020617]/90 border-blue-950/80 hover:border-blue-500/50 p-6 sm:p-8">
           <p className="text-blue-100/80 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
+            Serum AI Robotics Pvt Ltd is an innovative technology company specializing in the design, development, and deployment of AI-powered robotic assistants that enhance productivity, safety, and customer experiences across diverse industries.
+          </p>
+          <p className="text-blue-100/80 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
             By integrating <span className="text-blue-300 font-semibold">Artificial Intelligence (AI)</span>, <span className="text-blue-300 font-semibold">Machine Learning (ML)</span>, <span className="text-blue-300 font-semibold">Computer Vision</span>, <span className="text-blue-300 font-semibold">Natural Language Processing (NLP)</span>, <span className="text-blue-300 font-semibold">Robotics</span>, and <span className="text-blue-300 font-semibold">IoT technologies</span>, we build intelligent robotic solutions capable of assisting people in healthcare, hospitality, education, manufacturing, retail, public services, and smart cities.
           </p>
           <p className="text-blue-100/70 text-sm sm:text-base leading-relaxed">

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bot, Brain, CircuitBoard, Workflow, Users, FlaskConical, Layers } from "lucide-react";
+import { Bot, Brain, CircuitBoard, Workflow, Users, Layers } from "lucide-react";
 import SectionTitle from "./ui/SectionTitle";
 import { InteractiveServiceCard } from "./ui/InteractiveServiceCard";
 
@@ -70,19 +70,6 @@ const services = [
       "Real-Time Analytics & Tracking",
       "Appointment Scheduling",
       "Contactless Check-in & Registration",
-    ],
-  },
-  {
-    icon: FlaskConical,
-    title: "Research & Development",
-    desc: "Frontier innovation in proprietary AI algorithms, robotics prototyping, custom AI software, autonomous systems design, and intelligent human-robot interaction.",
-    image: "https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=800&q=80",
-    details: [
-      "AI Algorithm Development",
-      "Robotics Prototyping",
-      "Custom AI Software",
-      "Autonomous System Design",
-      "Intelligent Human-Robot Interaction",
     ],
   },
   {

@@ -41,53 +41,39 @@ const Hero = () => {
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-white w-full max-w-7xl mx-auto text-center">
         
-        {/* Brand Display - Scalable across mobile, tablet, desktop */}
-        <div className="flex flex-col items-center justify-center w-full max-w-full px-2">
-          <h1 className="flex items-baseline justify-center flex-nowrap gap-1.5 xs:gap-2 sm:gap-4 md:gap-6 lg:gap-8 font-extrabold tracking-tight font-heading select-none">
+        {/* Brand Display - 2-line layout matching official reference */}
+        <div className="flex flex-col items-center justify-center w-full max-w-5xl mx-auto px-2 select-none">
+          <h1 className="flex flex-col items-center justify-center gap-2 sm:gap-4 md:gap-6 w-full font-heading">
             
-            {/* SERUM */}
+            {/* Line 1: SERUM AI */}
             <motion.div
               custom={0.2}
               variants={textVariant}
               initial="hidden"
               animate="visible"
-              className="inline-flex items-baseline"
+              className="flex items-baseline justify-center gap-2.5 sm:gap-4 md:gap-6 lg:gap-8"
             >
-              <span className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] font-bold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-b from-white via-blue-100 to-blue-400 drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]">
-                S
+              <span className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl 2xl:text-[10rem] font-extrabold tracking-tight leading-none text-white drop-shadow-[0_0_35px_rgba(255,255,255,0.2)]">
+                SERUM
               </span>
-              <span className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[6.2rem] font-bold tracking-tight leading-none text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.2)] ml-0.5">
-                ERUM
-              </span>
-            </motion.div>
-
-            {/* AI */}
-            <motion.div
-              custom={0.35}
-              variants={textVariant}
-              initial="hidden"
-              animate="visible"
-              className="inline-flex items-baseline mx-0.5 sm:mx-1 md:mx-2"
-            >
-              <span className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[9.5rem] font-bold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-blue-400 drop-shadow-[0_0_35px_rgba(59,130,246,0.7)]">
+              <span className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl 2xl:text-[10rem] font-extrabold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-blue-500 drop-shadow-[0_0_40px_rgba(59,130,246,0.85)]">
                 AI
               </span>
             </motion.div>
 
-            {/* ROBOTICS */}
+            {/* Line 2: ─── ROBOTICS ─── */}
             <motion.div
-              custom={0.5}
+              custom={0.4}
               variants={textVariant}
               initial="hidden"
               animate="visible"
-              className="inline-flex items-baseline"
+              className="flex items-center justify-center gap-2.5 sm:gap-5 md:gap-8 w-full max-w-3xl"
             >
-              <span className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] font-bold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-b from-white via-blue-100 to-blue-400 drop-shadow-[0_0_30px_rgba(59,130,246,0.6)]">
-                R
+              <span className="h-[1.5px] sm:h-[2px] md:h-[2.5px] flex-1 max-w-[30px] xs:max-w-[50px] sm:max-w-[90px] md:max-w-[140px] lg:max-w-[180px] bg-gradient-to-r from-transparent via-blue-500/50 to-sky-400 rounded-full" />
+              <span className="text-sm xs:text-base sm:text-xl md:text-2xl lg:text-3xl 2xl:text-4xl font-extrabold tracking-[0.3em] xs:tracking-[0.35em] sm:tracking-[0.45em] md:tracking-[0.55em] leading-none text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-blue-500 drop-shadow-[0_0_20px_rgba(59,130,246,0.7)] uppercase pl-[0.3em] xs:pl-[0.35em] sm:pl-[0.45em] md:pl-[0.55em]">
+                ROBOTICS
               </span>
-              <span className="text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[6.2rem] font-bold tracking-tight leading-none text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.2)] ml-0.5">
-                OBOTICS
-              </span>
+              <span className="h-[1.5px] sm:h-[2px] md:h-[2.5px] flex-1 max-w-[30px] xs:max-w-[50px] sm:max-w-[90px] md:max-w-[140px] lg:max-w-[180px] bg-gradient-to-l from-transparent via-blue-500/50 to-sky-400 rounded-full" />
             </motion.div>
 
           </h1>

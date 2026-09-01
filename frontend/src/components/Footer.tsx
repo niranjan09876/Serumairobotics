@@ -65,7 +65,7 @@ const Footer = () => {
             },
             {
               title: "Company",
-              items: ["About AI X", "Methodology", "Featured Work", "Open Careers", "Contact Direct"]
+              items: ["About Serum AI Robotics", "Methodology", "Featured Work", "Open Careers", "Contact Direct"]
             },
             {
               title: "Security & Legal",

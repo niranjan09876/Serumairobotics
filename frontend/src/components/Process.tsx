@@ -34,7 +34,7 @@ const steps = [
 ];
 
 const Process = () => (
-  <section id="process" className="section-padding bg-[#010409]">
+  <section id="process" className="section-padding bg-transparent scroll-mt-20">
     <div className="container mx-auto max-w-6xl">
       <SectionTitle
         badge="Methodology"

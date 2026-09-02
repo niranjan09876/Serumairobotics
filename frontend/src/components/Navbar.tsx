@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import ThemeToggle from "./ui/ThemeToggle";
+import robotHead from "@/assets/robot-head.png";
+import { smoothScrollTo } from "@/lib/utils";
 
-const links = ["About", "Services", "Portfolio", "Process", "Careers", "Contact"];
+const links = ["About", "Products", "Services", "Process", "Careers", "Contact"];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -38,16 +40,14 @@ const Navbar = () => {
 
   const scrollTo = (id: string) => {
     setMobileOpen(false);
-    const element = document.getElementById(id.toLowerCase());
+    const cleanId = id.trim().toLowerCase();
+    const element = document.getElementById(cleanId);
     if (element) {
-      const navOffset = 70;
+      const navOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - navOffset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+      smoothScrollTo(Math.max(0, offsetPosition), 480);
     }
   };
 
@@ -58,25 +58,32 @@ const Navbar = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-            ? "bg-[#010409]/85 backdrop-blur-xl border-b border-blue-950/60 shadow-[0_4px_30px_rgba(0,10,30,0.5)]"
-            : "bg-transparent"
+          ? "bg-[#010409]/85 backdrop-blur-xl border-b border-blue-950/60 shadow-[0_4px_30px_rgba(0,10,30,0.5)]"
+          : "bg-transparent"
           }`}
       >
         <div className="container mx-auto flex items-center justify-between h-16 sm:h-20 px-4 sm:px-6">
           <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-baseline gap-1.5 sm:gap-2 font-heading font-bold select-none group text-left"
+            onClick={() => smoothScrollTo(0, 420)}
+            className="flex items-center gap-2 sm:gap-2.5 font-heading font-bold select-none group text-left"
             aria-label="SERUM AI ROBOTICS Home"
           >
-            <span className="text-lg sm:text-xl font-extrabold tracking-tight text-white group-hover:text-blue-100 transition-colors">
-              SERUM
+            <span className="flex items-baseline gap-1.5 sm:gap-2">
+              <span className="text-lg sm:text-xl font-extrabold tracking-tight text-white group-hover:text-blue-100 transition-colors">
+                SERUM
+              </span>
+              <span className="text-xl sm:text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-sky-300 to-blue-500 drop-shadow-[0_0_12px_rgba(59,130,246,0.6)]">
+                AI
+              </span>
+              <span className="text-base sm:text-lg font-bold tracking-tight text-white/90 group-hover:text-white transition-colors">
+                ROBOTICS
+              </span>
             </span>
-            <span className="text-xl sm:text-2xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-sky-300 to-blue-500 drop-shadow-[0_0_12px_rgba(59,130,246,0.6)]">
-              AI
-            </span>
-            <span className="text-base sm:text-lg font-bold tracking-tight text-white/90 group-hover:text-white transition-colors">
-              ROBOTICS
-            </span>
+            <img
+              src={robotHead}
+              alt="Robot Logo"
+              className="h-6 sm:h-7.5 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </button>
 
           {/* Desktop Links */}

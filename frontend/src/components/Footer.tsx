@@ -7,13 +7,15 @@ const XIcon = ({ size = 16, className = "" }: { size?: number; className?: strin
   </svg>
 );
 
+import { smoothScrollTo } from "@/lib/utils";
+
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    smoothScrollTo(0, 450);
   };
 
   return (
-    <footer className="border-t border-blue-950/80 bg-[#010409] py-12 sm:py-16 text-white relative">
+    <footer className="border-t border-blue-950/60 bg-transparent py-12 sm:py-16 text-white relative">
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 mb-12">
 

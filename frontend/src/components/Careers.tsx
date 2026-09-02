@@ -11,7 +11,7 @@ const jobs = [
 ];
 
 const Careers = () => (
-  <section id="careers" className="section-padding bg-[#010409]">
+  <section id="careers" className="section-padding bg-transparent scroll-mt-20">
     <div className="container mx-auto max-w-5xl">
       <SectionTitle
         badge="Careers"

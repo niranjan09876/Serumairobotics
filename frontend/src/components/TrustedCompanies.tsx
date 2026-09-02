@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const companies = ["Google", "Microsoft", "Amazon", "Stripe", "Netflix", "Spotify", "Airbnb", "Uber", "Oracle", "Nvidia"];
 
 const TrustedCompanies = () => (
-  <section className="py-12 sm:py-16 overflow-hidden border-y border-blue-950/70 bg-[#010409]">
+  <section className="py-12 sm:py-16 overflow-hidden border-y border-blue-950/50 bg-transparent">
     <div className="container mx-auto px-4 mb-6 sm:mb-8 text-center">
       <p className="text-xs sm:text-sm font-mono text-blue-400/80 uppercase tracking-widest">
         Trusted by world-class engineering teams & enterprises

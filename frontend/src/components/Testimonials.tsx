@@ -42,7 +42,7 @@ const Testimonials = () => {
   const t = testimonials[idx];
 
   return (
-    <section id="testimonials" className="section-padding bg-[#010409]">
+    <section id="testimonials" className="section-padding bg-transparent">
       <div className="container mx-auto max-w-5xl">
         <SectionTitle
           badge="Endorsements"

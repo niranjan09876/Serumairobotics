@@ -46,7 +46,7 @@ const AnimatedCounter = ({ value, suffix }: { value: number; suffix: string }) =
 };
 
 const About = () => (
-  <section id="about" className="section-padding bg-[#010409]">
+  <section id="about" className="section-padding bg-transparent scroll-mt-20">
     <div className="container mx-auto max-w-6xl">
       <SectionTitle
         badge="About Us"

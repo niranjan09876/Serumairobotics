@@ -89,7 +89,7 @@ const services = [
 ];
 
 const Services = () => (
-  <section id="services" className="section-padding bg-[#010409]">
+  <section id="services" className="section-padding bg-transparent scroll-mt-20">
     <div className="container mx-auto max-w-7xl">
       <SectionTitle
         badge="Services"

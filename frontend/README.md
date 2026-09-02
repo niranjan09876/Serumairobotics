@@ -64,7 +64,7 @@ aura-studio/
 │   │   ├── ui/              # Granular atomic design components (Cards, Inputs)
 │   │   ├── Hero.tsx         # Primary immersive entry point
 │   │   ├── Services.tsx     # Value proposition display logic
-│   │   ├── Portfolio.tsx    # Responsive Bento-grid data display
+│   │   ├── Products .tsx    # Responsive Bento-grid data display
 │   │   ├── Contact.tsx      # Secure data submission surface
 │   │   └── ...              # [Additional Sectional Modules]
 │   │

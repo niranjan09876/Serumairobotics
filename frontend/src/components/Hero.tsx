@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { smoothScrollTo } from "@/lib/utils";
 
 const Hero = () => {
   const textVariant = {
@@ -16,21 +17,25 @@ const Hero = () => {
   };
 
   const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
+    const cleanId = id.trim().toLowerCase();
+    const el = document.getElementById(cleanId);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+      const navOffset = 80;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+      smoothScrollTo(Math.max(0, offsetPosition), 480);
     }
   };
 
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen w-full flex flex-col items-center justify-center overflow-hidden font-sans bg-[#010409] pt-20 pb-16 px-4">
+    <section className="relative min-h-[90vh] md:min-h-screen w-full flex flex-col items-center justify-center overflow-hidden font-sans bg-transparent pt-20 pb-16 px-4">
       {/* Background ambient electric blue glowing spots */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[500px] md:w-[700px] h-[320px] sm:h-[500px] md:h-[700px] bg-gradient-to-tr from-blue-600/20 via-sky-500/15 to-transparent rounded-full blur-[100px] sm:blur-[140px] pointer-events-none -z-10" />
       <div className="absolute top-1/4 -left-20 w-72 h-72 bg-blue-700/10 rounded-full blur-[120px] pointer-events-none -z-10" />
       <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-sky-500/10 rounded-full blur-[120px] pointer-events-none -z-10" />
 
       {/* Cyber Grid Pattern Background */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none -z-10"
         style={{
           backgroundImage: `linear-gradient(#3b82f6 1px, transparent 1px), linear-gradient(90deg, #3b82f6 1px, transparent 1px)`,
@@ -40,11 +45,11 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-white w-full max-w-7xl mx-auto text-center">
-        
+
         {/* Brand Display - 2-line layout matching official reference */}
         <div className="flex flex-col items-center justify-center w-full max-w-5xl mx-auto px-2 select-none">
           <h1 className="flex flex-col items-center justify-center gap-2 sm:gap-4 md:gap-6 w-full font-heading">
-            
+
             {/* Line 1: SERUM AI */}
             <motion.div
               custom={0.2}
@@ -99,13 +104,13 @@ const Hero = () => {
           className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mt-8 sm:mt-10 w-full sm:w-auto px-4"
         >
           <button
-            onClick={() => scrollToSection("portfolio")}
+            onClick={() => scrollToSection("products")}
             className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white text-sm shadow-[0_0_25px_rgba(59,130,246,0.4)] hover:shadow-[0_0_35px_rgba(14,165,233,0.6)] transition-all duration-300 flex items-center justify-center gap-2 group"
           >
             <span>Explore Work</span>
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
-          
+
           <button
             onClick={() => scrollToSection("contact")}
             className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-semibold bg-blue-950/40 hover:bg-blue-900/40 border border-blue-500/30 hover:border-blue-400/60 text-blue-100 text-sm backdrop-blur-md transition-all duration-300"

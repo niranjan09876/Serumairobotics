@@ -11,7 +11,7 @@ const offices = [
 ];
 
 const Locations = () => (
-  <section id="locations" className="section-padding bg-[#010409]">
+  <section id="locations" className="section-padding bg-transparent">
     <div className="container mx-auto max-w-6xl">
       <SectionTitle
         badge="Global Footprint"

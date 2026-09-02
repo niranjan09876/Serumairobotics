@@ -26,7 +26,7 @@ const Contact = () => {
     "w-full px-4 py-3 rounded-xl bg-[#030712]/80 border border-blue-950/80 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all text-sm sm:text-base text-white placeholder:text-blue-200/40";
 
   return (
-    <section id="contact" className="section-padding bg-[#010409]">
+    <section id="contact" className="section-padding bg-transparent scroll-mt-20">
       <div className="container mx-auto max-w-6xl">
         <SectionTitle
           badge="Initiate Dialogue"

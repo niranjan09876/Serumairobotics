@@ -115,7 +115,7 @@ const industries = [
 ];
 
 const Industries = () => (
-  <section id="industries" className="section-padding bg-[#010409]">
+  <section id="industries" className="section-padding bg-transparent">
     <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <SectionTitle
         badge="Industries"

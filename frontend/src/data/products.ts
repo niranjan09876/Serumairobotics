@@ -932,6 +932,66 @@ export const products: Product[] = [
     ctaDescription:
       "Schedule a technical consultation with our event robotics team for venue mapping, badge scanning integration, and expo trial operations.",
   },
+  {
+    id: "tourism-place-ai-robot",
+    slug: "tourism-place-ai-robot-assistant",
+    title: "Tourism Place AI Robot Assistant",
+    badge: "Tourism & Cultural Heritage",
+    image: "/tourism-place-robot.png",
+    imageSide: "right",
+    layout: "reference-panel",
+    shortDescription:
+      "An AI Robot Assistant at tourism and historical sites can enhance visitor experiences by providing multilingual guidance, interactive storytelling, navigation, accessibility support, and real-time safety information, while helping preserve and promote cultural heritage.",
+    intro:
+      "An AI Robot Assistant at tourism and historical sites can enhance visitor experiences by providing multilingual guidance, interactive storytelling, navigation, accessibility support, and real-time safety information, while helping preserve and promote cultural heritage.",
+    sectionTitle: "AI Robot Assistant",
+    sectionItems: [
+      "Share site rules",
+      "Recommend nearby attractions",
+      "Provide weather updates",
+      "Explain the history of monuments",
+      "Narrate stories about kings, queens, freedom fighters, and historical events",
+      "Describe architecture and engineering",
+      "Explain sculptures, paintings, and artifacts",
+      "Present archaeological discoveries",
+      "Offer interactive question-and-answer sessions",
+      "Indoor/outdoor navigation",
+      "Suggest optimized walking routes",
+      "Locate museums, galleries, cafés, restrooms, and exits",
+      "Guide visitors to accessible paths",
+    ],
+    ctaHeading: "Ready to introduce Tourism Place AI Robot Assistant at your heritage destination?",
+    ctaDescription:
+      "Schedule a technical consultation with our tourism robotics specialists for historical site mapping, audio-visual storytelling setup, and visitor guide pilot trials.",
+  },
+  {
+    id: "smart-city-ai-robot",
+    slug: "smart-city-ai-robot-assistant",
+    title: "Smart City AI Robot Assistant",
+    badge: "Smart City & Citizen Services",
+    image: "/smart-city-robot.png",
+    imageSide: "left",
+    layout: "reference-panel",
+    shortDescription:
+      "An AI Robot Assistant for Smart City Information Kiosks serves as a 24×7 digital citizen assistant, providing real-time information, public services, emergency assistance, tourism guidance, and multilingual support.",
+    intro:
+      "An AI Robot Assistant for Smart City Information Kiosks serves as a 24×7 digital citizen assistant, providing real-time information, public services, emergency assistance, tourism guidance, and multilingual support. These AI robots act as the public interface of a Smart City, connecting citizens and visitors to government departments, healthcare, transportation, emergency services, and local businesses.",
+    sectionTitle: "AI Robot Assistant",
+    sectionItems: [
+      "Historical monument details",
+      "Hotel recommendations",
+      "Restaurant suggestions",
+      "Local shopping guidance",
+      "Cultural events",
+      "Museum information",
+      "Festival schedules",
+      "Audio-guided city tours",
+      "Multilingual tourist assistance",
+    ],
+    ctaHeading: "Ready to deploy Smart City AI Robot Assistant across your municipality?",
+    ctaDescription:
+      "Schedule a demonstration with our urban automation specialists for citizen service portal integration, municipal kiosk setup, and public deployment trials.",
+  },
 ];
 
 export const getProductBySlug = (slug: string): Product | undefined => {

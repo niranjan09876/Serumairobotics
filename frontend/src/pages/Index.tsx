@@ -34,9 +34,6 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen text-white selection:bg-blue-600/40 selection:text-white overflow-x-hidden bg-[#010409]">
-      {/* Global Fixed Robot Background Layer */}
-      <div className="global-robot-bg" aria-hidden="true" />
-
       {/* Main Website Content Layer */}
       <div className="relative z-10">
       <ScrollProgress />

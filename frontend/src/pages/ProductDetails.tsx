@@ -73,9 +73,6 @@ const ProductDetails = () => {
 
   return (
     <div className="relative min-h-screen bg-[#010409] text-white selection:bg-blue-600/40 selection:text-white overflow-x-hidden">
-      {/* Global Background Layer */}
-      <div className="global-robot-bg" aria-hidden="true" />
-
       {/* Sticky Top Header with Back to Products */}
       <header className="sticky top-0 left-0 right-0 z-50 bg-[#010409]/90 backdrop-blur-xl border-b border-blue-950/70">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">

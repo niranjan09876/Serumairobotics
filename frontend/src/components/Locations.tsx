@@ -4,10 +4,7 @@ import SectionTitle from "./ui/SectionTitle";
 import GlassCard from "./ui/GlassCard";
 
 const offices = [
-  { city: "Hyderabad", country: "India", status: "Global HQ", timezone: "IST (UTC+5:30)" },
-  { city: "Bangalore", country: "India", status: "Engineering Hub", timezone: "IST (UTC+5:30)" },
-  { city: "London", country: "United Kingdom", status: "EMEA Operations", timezone: "GMT (UTC+0)" },
-  { city: "New York", country: "United States", status: "Americas Hub", timezone: "EST (UTC-5)" },
+  { city: "Hyderabad", country: "India", status: "Engineering Hub", timezone: "IST (UTC+5:30)" },
 ];
 
 const Locations = () => (
@@ -19,10 +16,11 @@ const Locations = () => (
         gradientTitle="presence."
         description="Operating seamlessly across timezones to provide round-the-clock engineering velocity."
       />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div className="flex justify-center">
         {offices.map((o, i) => (
           <motion.div
             key={o.city}
+            className="w-full max-w-xs sm:max-w-sm"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

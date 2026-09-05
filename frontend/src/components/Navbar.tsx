@@ -81,8 +81,8 @@ const Navbar = () => {
             </span>
             <img
               src={robotHead}
-              alt="Robot Logo"
-              className="h-6 sm:h-7.5 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              alt="SERUM AI ROBOTICS Logo"
+              className="h-6 sm:h-7 md:h-8 w-auto object-contain shrink-0 transition-transform duration-300 group-hover:scale-105 select-none"
             />
           </button>
 
@@ -103,13 +103,6 @@ const Navbar = () => {
           {/* Right Action Area */}
           <div className="flex items-center gap-3">
             <ThemeToggle />
-            <button
-              onClick={() => scrollTo("contact")}
-              className="hidden md:inline-flex items-center gap-1.5 px-5 py-2 rounded-xl text-sm font-semibold bg-gradient-to-r from-blue-600 to-sky-500 hover:from-blue-500 hover:to-sky-400 text-white shadow-[0_0_20px_rgba(59,130,246,0.35)] hover:shadow-[0_0_30px_rgba(14,165,233,0.55)] transition-all duration-300"
-            >
-              <span>Start Project</span>
-              <ArrowUpRight size={15} />
-            </button>
             <button
               className="md:hidden p-2 rounded-lg bg-blue-950/50 border border-blue-500/20 text-white hover:bg-blue-900/40 transition-colors"
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -156,16 +149,6 @@ const Navbar = () => {
                     <ArrowUpRight size={16} className="text-blue-500/60" />
                   </motion.button>
                 ))}
-              </div>
-
-              <div className="pt-6 border-t border-blue-950/80">
-                <button
-                  onClick={() => scrollTo("contact")}
-                  className="w-full py-3 rounded-xl font-semibold bg-gradient-to-r from-blue-600 to-sky-500 text-white shadow-[0_0_20px_rgba(59,130,246,0.4)] flex items-center justify-center gap-2 text-sm"
-                >
-                  <span>Start Project</span>
-                  <ArrowUpRight size={16} />
-                </button>
               </div>
             </motion.div>
           </>
